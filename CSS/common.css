@@ -268,5 +268,5 @@ nav{
 }
 
 .carousel-item:hover{
-    filter: contrast(150%);
+    filter: contrast(120%);
 }
