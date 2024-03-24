@@ -11,33 +11,74 @@
 
 <body>
 
-            <!------------------------BARRA DE NAVEGACIÓN----------------------->
-        <nav>
-            <ul class="menu-horizontal">
-              <li>
-                <a href="#">Categor&iacuteas</a>
-                <ul class="menu-vertical">
-                  <li><a href="../HTML/accion.html">Accion</a></li>
-                  <li><a href="../HTML/disparos.html">Disparo</a></li>
-                  <li><a href="../HTML/Rol.html">Rol</a></li>
-                  <li><a href="../HTML/estrategia.html">estrategia</a></li>
-                  <li><a href="../HTML/deportes.html">deportes</a></li>
-                </ul>
-              </li>
+<!------------------------BARRA DE NAVEGACIÓN----------------------->
+<nav>
+  <ul class="menu-horizontal">
+    <li>
+      <a href="#">Categor&iacuteas</a>
+      <ul class="menu-vertical">
+        <li><a href="../HTML/accion.html">Accion</a></li>
+        <li><a href="../HTML/disparos.html">Disparo</a></li>
+        <li><a href="../HTML/Rol.html">Rol</a></li>
+        <li><a href="../HTML/estrategia.html">estrategia</a></li>
+        <li><a href="../HTML/deportes.html">deportes</a></li>
+      </ul>
+    </li>
               
-              <li><a href="../HTML/formulario.html">Registrarse</a></li>
-              
-              <li class="nombre-tienda"><div style="text-align: center;"><a href="../HTML/index.html"><img src="../imagenes/LogoPixelGame.png" height="50"></a><br>PixielGame</div></li>
+    <li><a href="../HTML/formulario.html">Registrarse</a></li>
+    <li class="nombre-tienda"><div style="text-align: center;"><a href="../HTML/index.html"><img src="../imagenes/LogoPixelGame.png" height="50"></a><br>PixielGame</div></li>
               
           
-            </ul>
-          </nav>
-        
-        
-        
-        
-        
-          <!------------------------tarjetas----------------------->
+  </ul>
+</nav>
+<!--POP UP REGISTRO-->
+<div class="popup" id="popup">
+            <div class="popup-contenido">
+                <span class="cerrar" onclick="cerrarPopup()">&times;</span>
+                <form id="registroForm">
+                  <div class="mb-3">
+                    <label for="NombreCompleto" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="NombreCompleto" placeholder="Ej: Juan P&eacute;rez" autofocus required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="NombreUsuario" class="form-label">Crear nombre de usuario</label>
+                    <input type="text" class="form-control" id="NombreUsuario" placeholder="Ej: Juan.Perez" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="CorreoElectronico" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ej: Juanperez@gmail.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ClaveAcceso" class="form-label">Crea una clave para acceso</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="ClaveAcceso" placeholder="*********" required>
+                      <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('ClaveAcceso')">Mostrar</button>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="RepiteClave" class="form-label">Repite la clave por favor</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control" id="RepiteClave" placeholder="*********" required>
+                      <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('RepiteClave')">Mostrar</button>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="FechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="FechaNacimiento" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="DireccionDespacho" class="form-label">Dirección de despacho (opcional)</label>
+                    <input type="text" class="form-control" id="DireccionDespacho" placeholder="Ingrese dirección de despacho">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">Guardar</button>
+                    <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                  </div>
+                </form>
+            </div>
+</div>
+<!--CONTENIDO-->    
+            <div class="contenedor-padre-juegos">
                 <div class="contenedor-juegos">
                     <img src="../imagenes/imageneldenring.jpg" alt="Elden Ring">
                     <p class="precio">Elden Ring<br>$49.990<p>
@@ -48,9 +89,8 @@
                     <p class="precio">Genshin Impact<br>$9.990</p>
                     <p class="descripcion">Genshin Impact es un videojuego de rol de acción de mundo abierto y gratuito, con una mec&aacute;nica de monetizaci&oacute;n de gacha para conseguir elementos adicionales como personajes especiales y armas.</p>
                 </div>
-        
-        
             </div>
-        </body> </html>
+</body>
+</html>
         
    
