@@ -269,6 +269,6 @@ nav{
 .carousel-item:hover{
     filter: drop-shadow(30px 30px 20px rgba(28, 25, 25, 0.7));
 }
-.form-label p{
+.form-label{
     color:rgb(255, 255, 255)
 }
