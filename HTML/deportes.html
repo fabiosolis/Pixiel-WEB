@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!------------------------BARRA DE NAVEGACIÓN----------------------->
+<!------------------------BARRA DE NAVEGACIÓN----------------------->
 <nav>
     <ul class="menu-horizontal">
       <li>
@@ -24,13 +24,14 @@
         </ul>
       </li>
       
-      <li><a href="../HTML/formulario.html">Registrarse</a></li>
+      <li><a href="#" id="mostrarPopup">Registrarse</a></li>
       
       <li class="nombre-tienda"><div style="text-align: center;"><a href="../HTML/index.html"><img src="../imagenes/LogoPixelGame.png" height="50"></a><br>PixielGame</div></li>
       
   
     </ul>
-  </nav>
+</nav>
+  <!--FORMULARIO REGISTRO-->
   <div class="popup" id="popup">
     <div class="popup-contenido">
         <span class="cerrar" onclick="cerrarPopup()">&times;</span>
@@ -75,20 +76,90 @@
           </div>
         </form>
     </div>
+  </div>
+<!--CONTENIDO-->
+<div class="contenedor-padre-juegos">
+  <div class="contenedor-juegos">
+    <img src="../imagenes/imagenfc24.jpg" alt="FC24">
+    <p class="precio">EA SPORTS FC™ 24<br>$54.990</p>
+    <p class="descripcion">Se mueve, se ve y se juega como el futbol EA SPORTS FC™ 24 te acerca m&aacute;s al futbol que nunca gracias a las tres tecnolog&iacute;as que potencian el realismo del juego en cada partido.</p>
+  </div>
+  <div class="contenedor-juegos">
+    <img src="../imagenes/imagenwwe2k24.jpg" alt="WWE 2k24">
+    <p class="precio">WWE 2k24<br>$59.990</p>
+    <p class="descripcion">&Uacute;nete a las mayores estrellas del entretenimiento deportivo en una recreaci&oacute;n de WWE 2K24 de los mejores momentos de WrestleMania de los &uacute;ltimos cuarenta años. Participa en algunos de los combates más memorables que marcaron un antes y un despu&eacute;s, con luchadores como  “Stone Cold” Steve Austin, Undertaker y Andre the Giant, junto a leyendas modernas como “The American Nightmare” Cody Rhodes, John Cena, Rhea Ripley y Roman Reigns.</p>
+  </div>
 </div>
-  
-    <div class="contenedor-padre-juegos">
-        <div class="contenedor-juegos">
-            <img src="../imagenes/imagenfc24.jpg" alt="FC24">
-            <p class="precio">EA SPORTS FC™ 24<br>$54.990</p>
-            <p class="descripcion">Se mueve, se ve y se juega como el futbol EA SPORTS FC™ 24 te acerca m&aacute;s al futbol que nunca gracias a las tres tecnolog&iacute;as que potencian el realismo del juego en cada partido.</p>
-        </div>
-        <div class="contenedor-juegos">
-            <img src="../imagenes/imagenwwe2k24.jpg" alt="WWE 2k24">
-            <p class="precio">WWE 2k24<br>$59.990</p>
-            <p class="descripcion">&Uacute;nete a las mayores estrellas del entretenimiento deportivo en una recreaci&oacute;n de WWE 2K24 de los mejores momentos de WrestleMania de los &uacute;ltimos cuarenta años. Participa en algunos de los combates más memorables que marcaron un antes y un despu&eacute;s, con luchadores como  “Stone Cold” Steve Austin, Undertaker y Andre the Giant, junto a leyendas modernas como “The American Nightmare” Cody Rhodes, John Cena, Rhea Ripley y Roman Reigns.</p>
-        </div>
-    
-
-    </div>
-</body> </html>
+<script>
+      var popup = document.getElementById("popup");
+      
+      document.getElementById("mostrarPopup").addEventListener("click", function() {
+          popup.style.display = "flex";
+      });
+      
+      
+      function cerrarPopup() {
+          popup.style.display = "none";
+      }
+      function togglePassword(inputId) {
+                var input = document.getElementById(inputId);
+                if (input.type === "password") {
+                    input.type = "text";
+                } else {
+                    input.type = "password";
+                }
+            }
+      
+            document.getElementById('registroForm').addEventListener('submit', function(event) {
+                var nombreCompleto = document.getElementById('NombreCompleto').value.trim();
+                var nombreUsuario = document.getElementById('NombreUsuario').value.trim();
+                var correoElectronico = document.getElementById('CorreoElectronico').value.trim();
+                var claveAcceso = document.getElementById('ClaveAcceso').value.trim();
+                var repiteClave = document.getElementById('RepiteClave').value.trim();
+                var fechaNacimiento = document.getElementById('FechaNacimiento').value.trim();
+                var direccionDespacho = document.getElementById('DireccionDespacho').value.trim();
+      
+                if (!nombreCompleto || !nombreUsuario || !correoElectronico || !claveAcceso || !repiteClave || !fechaNacimiento) {
+                    alert('Por favor, complete todos los campos.');
+                    event.preventDefault();
+                    return;
+                }
+      
+                
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(correoElectronico)) {
+                    alert('Por favor, ingrese un correo electrónico válido.');
+                    event.preventDefault();
+                    return;
+                }
+      
+                var passwordRegex = /^(?=.*\d)(?=.*[A-Z]).{6,18}$/;
+                if (!passwordRegex.test(claveAcceso)) {
+                    alert('La contraseña debe tener al menos un número y una letra en mayúscula, y tener entre 6 y 18 caracteres.');
+                    event.preventDefault();
+                    return;
+                }
+                
+                if (claveAcceso !== repiteClave) {
+                    alert('Las contraseñas no coinciden.');
+                    event.preventDefault();
+                    return;
+                }
+      
+                var hoy = new Date();
+                var fechaNacimientoDate = new Date(fechaNacimiento);
+                var edad = hoy.getFullYear() - fechaNacimientoDate.getFullYear();
+                var mes = hoy.getMonth() - fechaNacimientoDate.getMonth();
+                if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimientoDate.getDate())) {
+                    edad--;
+                }
+                if (edad < 13) {
+                    alert('Debe tener al menos 13 años para registrarse en el sitio web.');
+                    event.preventDefault();
+                    return;
+                }
+      
+            });
+</script>
+</body>
+</html>
