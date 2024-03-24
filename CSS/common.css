@@ -263,3 +263,10 @@ nav{
     right: 10px;
     cursor: pointer;
 }
+.card:hover{
+    filter: contrast(150%);
+}
+
+.carousel-item:hover{
+    filter: contrast(150%);
+}
