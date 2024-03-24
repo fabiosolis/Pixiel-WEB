@@ -2,8 +2,7 @@ html, body{
     margin: 0;  
     padding: 0; 
     background-image: url("../imagenes/fondoo.jpg");   
-    font-family:sans-serif;
-    text-transform: capitalize;
+    font-family: "Century Gothic";
     opacity: 3;
 }
 
