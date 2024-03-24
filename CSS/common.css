@@ -135,14 +135,9 @@ nav{
     margin: 0;
     display: flex; 
     justify-content: space-between; 
-    list-style: none;
-    display: flex;
-    justify-content: left;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    justify-content:space-between; 
+    background-color: #000000;
+    opacity: 0.8;
+
 
 }
 
