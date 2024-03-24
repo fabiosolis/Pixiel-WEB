@@ -31,51 +31,51 @@
           
   </ul>
 </nav>
-<!--POP UP REGISTRO-->
+<!--FORMULARIO REGISTRO-->
 <div class="popup" id="popup">
-            <div class="popup-contenido">
-                <span class="cerrar" onclick="cerrarPopup()">&times;</span>
-                <form id="registroForm">
-                  <div class="mb-3">
-                    <label for="NombreCompleto" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="NombreCompleto" placeholder="Ej: Juan P&eacute;rez" autofocus required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="NombreUsuario" class="form-label">Crear nombre de usuario</label>
-                    <input type="text" class="form-control" id="NombreUsuario" placeholder="Ej: Juan.Perez" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="CorreoElectronico" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ej: Juanperez@gmail.com" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="ClaveAcceso" class="form-label">Crea una clave para acceso</label>
-                    <div class="input-group">
-                      <input type="password" class="form-control" id="ClaveAcceso" placeholder="*********" required>
-                      <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('ClaveAcceso')">Mostrar</button>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="RepiteClave" class="form-label">Repite la clave por favor</label>
-                    <div class="input-group">
-                      <input type="password" class="form-control" id="RepiteClave" placeholder="*********" required>
-                      <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('RepiteClave')">Mostrar</button>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="FechaNacimiento" class="form-label">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="FechaNacimiento" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="DireccionDespacho" class="form-label">Dirección de despacho (opcional)</label>
-                    <input type="text" class="form-control" id="DireccionDespacho" placeholder="Ingrese dirección de despacho">
-                  </div>
-                  <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-secondary">Guardar</button>
-                    <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
-                  </div>
-                </form>
-            </div>
+  <div class="popup-contenido">
+      <span class="cerrar" style="color:aliceblue" onclick="cerrarPopup()">&times;</span>
+      <form id="registroForm">
+        <div class="mb-3">
+          <label for="NombreCompleto" class="form-label" style="color:aliceblue">Nombre Completo</label>
+          <input type="text" class="form-control" id="NombreCompleto" placeholder="Ej: Juan P&eacute;rez" autofocus required>
+        </div>
+        <div class="mb-3">
+          <label for="NombreUsuario" class="form-label" style="color:aliceblue">Crear nombre de usuario</label>
+          <input type="text" class="form-control" id="NombreUsuario" placeholder="Ej: Juan.Perez" required>
+        </div>
+        <div class="mb-3">
+          <label for="CorreoElectronico" class="form-label" style="color:aliceblue">Correo electrónico</label>
+          <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ej: Juanperez@gmail.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="ClaveAcceso" class="form-label" style="color:aliceblue">Crea una clave para acceso</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="ClaveAcceso" placeholder="*********" required>
+            <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('ClaveAcceso')">Mostrar</button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="RepiteClave" class="form-label" style="color:aliceblue">Repite la clave por favor</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="RepiteClave" placeholder="*********" required>
+            <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('RepiteClave')">Mostrar</button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="FechaNacimiento" class="form-label" style="color:aliceblue">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="FechaNacimiento" required>
+        </div>
+        <div class="mb-3">
+          <label for="DireccionDespacho" class="form-label" style="color:aliceblue">Dirección de despacho (opcional)</label>
+          <input type="text" class="form-control" id="DireccionDespacho" placeholder="Ingrese dirección de despacho">
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-secondary">Guardar</button>
+          <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+        </div>
+      </form>
+  </div>
 </div>
 <!--CONTENIDO-->    
 <div class="contenedor-padre-juegos">
