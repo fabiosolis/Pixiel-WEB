@@ -345,3 +345,12 @@ nav{
     font-size: 18px;
 }
 
+.popup-contenido{
+    width: 450px; 
+    background-color: rgba(51, 51, 51, 0.7);
+    border: 2px solid #fff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
