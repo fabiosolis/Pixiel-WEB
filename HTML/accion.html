@@ -73,7 +73,7 @@
             <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
           </div>
         </form>
-        <img src="../imagenes/close.png" alt="Close" class="cerrar-imagen" onclick="cerrarPopup()">
+        <img src="../imagenes/flechared.png" alt="Close" class="cerrar-imagen" onclick="cerrarPopup()">
     </div>
 </div>
 
@@ -94,13 +94,17 @@
         <a href="index.html">
             <img src="../imagenes/flechared.png" alt="flecha" class="image"></a>
 </div>
+
 <script>
+var popup = document.getElementById("popup");
+
 document.getElementById("mostrarPopup").addEventListener("click", function() {
-    document.getElementById("popup").style.display = "flex";
+    popup.style.display = "flex";
 });
 
+
 function cerrarPopup() {
-    document.getElementById("popup").style.display = "none";
+    popup.style.display = "none";
 }
 </script>
 
