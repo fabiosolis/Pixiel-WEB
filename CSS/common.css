@@ -108,13 +108,6 @@ html, body{
     transform: translateX(-50%);
 }
 
-#html{
-    margin: auto;
-    padding: 20px;
-    max-width: 900px;
-    background: white;
-}
-
 nav{
     max-width: auto;
     margin: auto;
@@ -178,14 +171,6 @@ nav{
     margin-left:auto; 
     margin-right: 30px;
     color: aliceblue;
-}
-
-#html{
-    margin: auto;
-    padding: 20px;
-    max-width: 900px;
-    background: white;
-
 }
 
 nav{
