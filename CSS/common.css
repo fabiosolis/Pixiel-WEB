@@ -69,8 +69,6 @@ html, body{
 .footer-row{
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
 .footer-links{
@@ -87,7 +85,6 @@ html, body{
     padding-bottom: 10px;
     display: inline-block
 }
-
 
 .footer-links ul li a {
     font-size:18px;
@@ -117,7 +114,6 @@ html, body{
     padding: 20px;
     max-width: 900px;
     background: white;
-
 }
 
 nav{
@@ -126,7 +122,7 @@ nav{
     background-color: #333;
     font-size: 20px;
     margin-top: 20px auto;
-  z-index: 9999;
+    z-index: 9999;
 }
 
 .menu-horizontal{
@@ -189,7 +185,7 @@ nav{
     margin-left:auto; 
     margin-right: 30px;
     color: aliceblue;
-  }
+}
 
 #html{
     margin: auto;
@@ -198,6 +194,7 @@ nav{
     background: white;
 
 }
+
 nav{
     max-width: auto;
     margin: auto;
@@ -205,41 +202,6 @@ nav{
     font-size: 20px;
     margin-top: 20px auto;
   z-index: 9999;
-}
-
-.menu-horizontal > li > a{
-    display: block;
-    padding: 25px 20px;
-    color: white;
-    text-decoration: none;
-}
-.menu-horizontal > li:hover{
-    background-color: rgb(121, 107, 107);
-}
-.menu-vertical{
-    position: absolute;
-    display: none;
-    list-style: none;
-    width: 200px;
-    background-color: rgba(0, 0, 0, .5);
-}
-.menu-horizontal li:hover .menu-vertical{
-    display: block;
-}
-.menu-vertical li:hover{
-    background-color: black;
-}
-
-.menu-vertical li a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 15px 15px 20px;
-}
-  
-.contenedor-padre-juegos {
-    display: inline-block;
-    height: fit-content;
 }
 
 .contenedor-padre-juegos {
