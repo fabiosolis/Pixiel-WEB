@@ -268,5 +268,5 @@ nav{
 }
 
 .carousel-item:hover{
-    filter: drop-shadow(16px 16px 20px rgba(107, 32, 32, 0.589)) invert(85%);
+    filter: drop-shadow(16px 16px 20px rgba(107, 32, 32, 0.589)) invert(5%);
 }
