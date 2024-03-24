@@ -24,13 +24,14 @@
       </ul>
     </li>
     
-    <li><a href="../HTML/formulario.html">Registrarse</a></li>
+    <li><a href="#" id="mostrarPopup">Registrarse</a></li>
     
     <li class="nombre-tienda"><div style="text-align: center;"><a href="../HTML/index.html"><img src="../imagenes/LogoPixelGame.png" height="50"></a><br>PixielGame</div></li>
     
 
   </ul>
 </nav>
+<!--FORMULARIO REGISTRO-->
 <div class="popup" id="popup">
   <div class="popup-contenido">
       <span class="cerrar" onclick="cerrarPopup()">&times;</span>
@@ -79,10 +80,9 @@
   </div>
 </div>
 
-<!---------------------------CAROUSEL------------------------------------->
+<!---------------------------CARRUSEL CATEGORIAS------------------------------------->
     <p>
-             
-           
+   
                 <div id="carouseltienda" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -109,11 +109,10 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
                   
              
-                  <h2 style="text-align:center; color:aliceblue; margin-bottom: 40px;"> 
-                <h1></h1>
+                <h2 style="text-align:center; color:aliceblue; margin-bottom: 40px;">
  
 
 <!---------------------------------TARJETAS DE CATEGORÍAS-------------------------------------------->
@@ -225,6 +224,8 @@
 
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--SCRIPT REGISTRO-->
 <script>
   var popup = document.getElementById("popup");
   
@@ -236,7 +237,66 @@
   function cerrarPopup() {
       popup.style.display = "none";
   }
-  </script>
+  function togglePassword(inputId) {
+            var input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+  
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            var nombreCompleto = document.getElementById('NombreCompleto').value.trim();
+            var nombreUsuario = document.getElementById('NombreUsuario').value.trim();
+            var correoElectronico = document.getElementById('CorreoElectronico').value.trim();
+            var claveAcceso = document.getElementById('ClaveAcceso').value.trim();
+            var repiteClave = document.getElementById('RepiteClave').value.trim();
+            var fechaNacimiento = document.getElementById('FechaNacimiento').value.trim();
+            var direccionDespacho = document.getElementById('DireccionDespacho').value.trim();
+  
+            if (!nombreCompleto || !nombreUsuario || !correoElectronico || !claveAcceso || !repiteClave || !fechaNacimiento) {
+                alert('Por favor, complete todos los campos.');
+                event.preventDefault();
+                return;
+            }
+  
+            
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(correoElectronico)) {
+                alert('Por favor, ingrese un correo electrónico válido.');
+                event.preventDefault();
+                return;
+            }
+  
+            var passwordRegex = /^(?=.*\d)(?=.*[A-Z]).{6,18}$/;
+            if (!passwordRegex.test(claveAcceso)) {
+                alert('La contraseña debe tener al menos un número y una letra en mayúscula, y tener entre 6 y 18 caracteres.');
+                event.preventDefault();
+                return;
+            }
+            
+            if (claveAcceso !== repiteClave) {
+                alert('Las contraseñas no coinciden.');
+                event.preventDefault();
+                return;
+            }
+  
+            var hoy = new Date();
+            var fechaNacimientoDate = new Date(fechaNacimiento);
+            var edad = hoy.getFullYear() - fechaNacimientoDate.getFullYear();
+            var mes = hoy.getMonth() - fechaNacimientoDate.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimientoDate.getDate())) {
+                edad--;
+            }
+            if (edad < 13) {
+                alert('Debe tener al menos 13 años para registrarse en el sitio web.');
+                event.preventDefault();
+                return;
+            }
+  
+        });
+</script>
 </body>
 </html>
 
